@@ -142,12 +142,16 @@ img {
 }
 
 .contacts-link {
+  display: flex;
+  align-items: center;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .contacts-link:hover,
@@ -155,19 +159,9 @@ img {
   color: var(--secondary-elements-color);
 }
 
-.header .contacts-link {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  margin: 0;
-}
-
 .contacts-list {
   display: flex;
   margin-left: auto;
-}
-.contacts-link-item {
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .contacts-link-item:first-child {
@@ -176,6 +170,7 @@ img {
 
 .header-icon {
   margin-right: 10px;
+  fill: currentColor;
 }
 
 .contacts-link:hover .header-icon,
@@ -197,7 +192,7 @@ img {
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(/images/background-img.png);
+    url(../images/background-img.jpg);
   max-width: 1600px;
   height: 600px;
   background-repeat: no-repeat;
@@ -357,11 +352,12 @@ img {
 .team-position {
   font-size: 16px;
   line-height: 1.18;
+  margin-bottom: 16px;
 }
 
 .team-member-description {
   padding-top: 30px;
-  padding-bottom: 16px;
+  padding-bottom: 30px;
 }
 
 /*----------ADD----HOMEWORK-4-----------*/
@@ -369,7 +365,6 @@ img {
 .social-links-list {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
   gap: 10px;
 }
 
@@ -385,52 +380,57 @@ img {
   height: 100%;
   width: 100%;
   border-radius: 50%;
+  color: #afb1b8;
 }
 
 .social-link:hover,
 .social-link:focus {
   background-color: var(--active-main-color);
+  color: var(--header-background-color);
 }
 
 .social-link-icon {
-  fill: #afb1b8;
-}
-
-.social-link:hover .social-link-icon {
-  fill: var(--header-background-color);
+  fill: currentColor;
 }
 
 /*-----------ADD-HOMEWORK-4-----*/
 
 /*-----------SECTION-CLIENT-----*/
 
-.client-container {
+.section-client {
+  padding: 94px 0;
 }
 
 .client-list {
   display: flex;
-  padding-bottom: 94px;
 }
 
 .client-list-item {
+  display: flex;
+  margin-right: 30px;
+}
+
+.client-link:hover,
+.client-link:focus {
+  border: 1px solid var(--active-main-color);
+  color: var(--active-main-color);
+}
+
+.icon-client {
+  fill: currentColor;
+  width: 106px;
+  height: 60px;
+}
+
+.client-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  margin-right: 30px;
-  padding: 16px 32px;
-}
-
-.client-list-item:hover {
-  border: 1px solid var(--active-main-color);
-}
-
-.icon-client {
-  fill: #afb1b8;
-}
-
-.client-list-item:hover .icon-client {
-  fill: var(--active-main-color);
+  color: #afb1b8;
 }
 
 .client-list-item:last-child {
@@ -443,7 +443,6 @@ img {
   line-height: 1.16;
   text-align: center;
   color: var(--main-title-color);
-  margin-top: 94px;
   margin-bottom: 50px;
 }
 
@@ -454,11 +453,9 @@ img {
   background-color: var(--dark-background-color);
 }
 
-.address {
-  display: inline-block;
-  width: 231px;
-  height: 81px;
-  margin-right: 70px;
+.footer-list .contacts-link {
+  padding-top: 0;
+  padding-bottom: 9px;
 }
 
 .address-link {
@@ -485,6 +482,11 @@ img {
 
 /*----------ADD----HOMEWORK-4-----------*/
 
+.footer .container {
+  display: flex;
+  align-items: baseline;
+}
+
 .social-links-list-title {
   font-weight: 700;
   font-size: 14px;
@@ -496,11 +498,7 @@ img {
 }
 
 .footer-link-list {
-  position: absolute;
-  display: inline-block;
-  width: 206px;
-  height: 80px;
-  margin-right: 0 auto;
+  margin-left: 70px;
 }
 
 .footer-link-list .social-link {
@@ -542,18 +540,12 @@ img {
   gap: 8px;
 }
 
-.button-web-site {
-  min-width: 128px;
-}
-
-.portfolio-buttons:first-child {
-  padding: 6px 25px;
-}
-
 .portfolio-buttons:hover,
 .portfolio-buttons:focus {
   background-color: var(--secondary-elements-color);
   color: var(--header-background-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .img-list {
@@ -571,7 +563,12 @@ img {
   flex-wrap: wrap;
 }
 
-.img-list-item:hover {
+.project-link {
+  display: block;
+}
+
+.project-link:hover,
+.project-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
